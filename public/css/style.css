@@ -1,0 +1,44 @@
+.label3D {
+  position: absolute;  /* let us position ourself inside the container */
+  z-index: 0;          /* make a new stacking context so children don't sort with rest of page */
+  left: 0;             /* make our position the top left of the container */
+  top: 0;
+  color: white;
+  user-select: none;
+  text-shadow:         /* create a black outline */
+  -2px -2px 0 #000,
+  0   -2px 0 #000,
+  2px -2px 0 #000,
+  2px  0   0 #000,
+  2px  2px 0 #000,
+  0    2px 0 #000,
+  -2px  2px 0 #000,
+  -2px  0   0 #000;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#blocker {
+  z-index: 0; 
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+body {
+    margin: 0;
+}
+
+#MyViewerDiv {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #F0F8FF;
+}
