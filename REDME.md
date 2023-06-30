@@ -6,6 +6,17 @@ npm install
 npm run start
 ```
 
+# TODO
+- [x] create a basic website
+- [x] create a basic server
+- [x] setup webpack
+- [x] setup docasaurus for documentation
+- [] create github actions for code quality checks (eslint, prettier, sonarcloud)
+- [] create API tests using postman for the autodesk API
+- [] finish autodesk API postman collection and documentation
+- [] create github actions for automatic deployment
+
+
 # ---------------------- Oauth2 -------------------------
 Get Oauth2 token from https://aps.autodesk.com/en/docs/oauth/v2/tutorials/get-2-legged-token/
 
