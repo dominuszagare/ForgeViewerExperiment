@@ -4,26 +4,26 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Basic VR interactions',
+    title: 'Visulize and interact',
     description: (
       <>
-        Contains teleportation, UI, object manipulation using controlers or hand tracking
+        Seamlessly view and interact with architectural models in the browser.
       </>
     ),
   },
   {
-    title: 'ThreeJS',
+    title: 'Autodesk Cloud API',
     description: (
       <>
-        Built on top of the TreeJS libary
+        Use Autodesk Forge API to convert and sync models between different formats and users.
       </>
     ),
   },
   {
-    title: 'Desktop mode',
+    title: 'Present',
     description: (
       <>
-        Even without a VR headset you can interact with the app using mouse and keyboard.
+        Present your models to clients and colleagues in the browser.
       </>
     ),
   },

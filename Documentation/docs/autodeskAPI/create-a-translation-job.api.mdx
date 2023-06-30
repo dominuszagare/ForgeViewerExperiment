@@ -1,0 +1,38 @@
+---
+id: create-a-translation-job
+title: "Create a Translation Job"
+description: "[See documentation](https://aps.autodesk.com/en/docs/model-derivative/v2/reference/http/job-POST/)"
+sidebar_label: "Create a Translation Job"
+hide_title: true
+hide_table_of_contents: true
+api: {"tags":["General"],"description":"[See documentation](https://aps.autodesk.com/en/docs/model-derivative/v2/reference/http/job-POST/)","requestBody":{"content":{"application/json":{"schema":{"type":"object","example":{"input":{"urn":"{{t1_ossEncodedSourceFileURN}}"},"output":{"destination":{"region":"us"},"formats":[{"type":"obj"}]}}}}}},"parameters":[{"name":"Content-Type","in":"header","schema":{"type":"string"},"example":"application/json"},{"name":"Authorization","in":"header","schema":{"type":"string"},"example":"Bearer {{access_token}}"},{"name":"x-ads-force-all","in":"header","schema":{"type":"boolean"},"example":"true"}],"responses":{"200":{"description":"Successful response","content":{"application/json":{}}}},"method":"post","path":"/modelderivative/v2/designdata/job","servers":[{"url":"https://developer.api.autodesk.com"},{"url":"http://{{contentuploadsignedurl}}"}],"jsonRequestBodyExample":{"input":{"urn":"{{t1_ossEncodedSourceFileURN}}"},"output":{"destination":{"region":"us"},"formats":[{"type":"obj"}]}},"info":{"title":"autodeskAPI","version":"1.0.0"},"postman":{"name":"Create a Translation Job","description":{"content":"[See documentation](https://aps.autodesk.com/en/docs/model-derivative/v2/reference/http/job-POST/)","type":"text/plain"},"url":{"path":["modelderivative","v2","designdata","job"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"disabled":false,"description":{"content":"","type":"text/plain"},"key":"x-ads-force-all","value":""},{"key":"Content-Type","value":"application/json"},{"key":"Accept","value":"application/json"}],"method":"POST","body":{"mode":"raw","raw":"\"\"","options":{"raw":{"language":"json"}}}}}
+sidebar_class_name: "post api-method"
+info_path: docs/autodeskAPI/autodeskapi
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import TabItem from "@theme/TabItem";
+
+## Create a Translation Job
+
+
+
+[See documentation](https://aps.autodesk.com/en/docs/model-derivative/v2/reference/http/job-POST/)
+
+<details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Header Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"Content-Type","in":"header","schema":{"type":"string"},"example":"application/json"}}></ParamsItem><ParamsItem className={"paramsItem"} param={{"name":"Authorization","in":"header","schema":{"type":"string"},"example":"Bearer {{access_token}}"}}></ParamsItem><ParamsItem className={"paramsItem"} param={{"name":"x-ads-force-all","in":"header","schema":{"type":"boolean"},"example":"true"}}></ParamsItem></ul></div></details><MimeTabs><TabItem label={"application/json"} value={"application/json-schema"}><details style={{}} data-collapsed={false} open={true}><summary style={{"textAlign":"left"}}><strong>Request Body</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><div style={{"marginTop":".5rem","marginBottom":".5rem","marginLeft":"1rem"}}>
+
+object
+
+</div></ul></details></TabItem></MimeTabs><div><ApiTabs><TabItem label={"200"} value={"200"}><div>
+
+Successful response
+
+</div><div><MimeTabs schemaType={"response"}><TabItem label={"application/json"} value={"application/json"}><SchemaTabs><TabItem label={"Schema"} value={"Schema"}><details style={{}} data-collapsed={false} open={true}><summary style={{"textAlign":"left"}}><strong>Schema</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}>any</ul></details></TabItem></SchemaTabs></TabItem></MimeTabs></div></TabItem></ApiTabs></div>
+      

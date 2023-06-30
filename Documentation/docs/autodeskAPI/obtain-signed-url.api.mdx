@@ -1,0 +1,34 @@
+---
+id: obtain-signed-url
+title: "Obtain Signed URL"
+description: "Obtain Signed URL"
+sidebar_label: "Obtain Signed URL"
+hide_title: true
+hide_table_of_contents: true
+api: {"tags":["General"],"parameters":[{"name":"Authorization","in":"header","schema":{"type":"string"},"example":"Bearer {{access_token}}"},{"name":"minutesExpiration","in":"query","schema":{"type":"integer"},"example":"5"},{"name":"ossBucketKey","in":"path","schema":{"type":"string"},"required":true},{"name":"ossSourceFileObjectKey","in":"path","schema":{"type":"string"},"required":true}],"responses":{"200":{"description":"Successful response","content":{"application/json":{}}}},"description":"Obtain Signed URL","method":"get","path":"/oss/v2/buckets/{ossBucketKey}/objects/{ossSourceFileObjectKey}/signeds3upload","servers":[{"url":"https://developer.api.autodesk.com"},{"url":"http://{{contentuploadsignedurl}}"}],"info":{"title":"autodeskAPI","version":"1.0.0"},"postman":{"name":"Obtain Signed URL","description":{"type":"text/plain"},"url":{"path":["oss","v2","buckets",":ossBucketKey","objects",":ossSourceFileObjectKey","signeds3upload"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"key":"minutesExpiration","value":""}],"variable":[{"disabled":false,"description":{"content":"(Required) ","type":"text/plain"},"type":"any","value":"","key":"ossBucketKey"},{"disabled":false,"description":{"content":"(Required) ","type":"text/plain"},"type":"any","value":"","key":"ossSourceFileObjectKey"}]},"header":[{"key":"Accept","value":"application/json"}],"method":"GET"}}
+sidebar_class_name: "get api-method"
+info_path: docs/autodeskAPI/autodeskapi
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import TabItem from "@theme/TabItem";
+
+## Obtain Signed URL
+
+
+
+Obtain Signed URL
+
+<details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Path Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"ossBucketKey","in":"path","schema":{"type":"string"},"required":true}}></ParamsItem><ParamsItem className={"paramsItem"} param={{"name":"ossSourceFileObjectKey","in":"path","schema":{"type":"string"},"required":true}}></ParamsItem></ul></div></details><details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Query Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"minutesExpiration","in":"query","schema":{"type":"integer"},"example":"5"}}></ParamsItem></ul></div></details><details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Header Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"Authorization","in":"header","schema":{"type":"string"},"example":"Bearer {{access_token}}"}}></ParamsItem></ul></div></details><div><ApiTabs><TabItem label={"200"} value={"200"}><div>
+
+Successful response
+
+</div><div><MimeTabs schemaType={"response"}><TabItem label={"application/json"} value={"application/json"}><SchemaTabs><TabItem label={"Schema"} value={"Schema"}><details style={{}} data-collapsed={false} open={true}><summary style={{"textAlign":"left"}}><strong>Schema</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}>any</ul></details></TabItem></SchemaTabs></TabItem></MimeTabs></div></TabItem></ApiTabs></div>
+      
