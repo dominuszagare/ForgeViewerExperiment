@@ -1,4 +1,4 @@
-import { initViewer, loadModel } from '/jsm/viewer/viewer.js';
+import { initViewer, loadModel } from '/viewer.js';
 
 initViewer(document.getElementById('preview')).then(viewer => {
     const urn = window.location.hash?.substring(1);
@@ -12,6 +12,7 @@ async function setupModelSelection(viewer, selectedUrn) {
     try {
         const resp = await fetch('/api/models');
         if (!resp.ok) {
+            console.log("Failed to get models saved in storage",resp)
             throw new Error(await resp.text());
         }
         const models = await resp.json();

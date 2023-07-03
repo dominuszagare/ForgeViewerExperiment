@@ -1,3 +1,7 @@
+//Turns out autodesk has a node module for this, but I didn't know that when I wrote this code
+//All api calls are abstracted away in the autodesk forge node module
+
+
 //get the access token from the server
 
 //get client id and secret from environment variables

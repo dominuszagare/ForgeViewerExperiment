@@ -2,11 +2,10 @@
 const express = require('express');
 const axios = require('axios');
 const app = express();
-const port = 3000;
+const { PORT } = require('./config.js');
 const path = require('path');
 const bodyParser = require('body-parser');
 require('dotenv').config();
-const request = require('request');
 const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
 
@@ -21,6 +20,9 @@ app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
+
+app.use(require('./routes/auth.js'));
+app.use(require('./routes/models.js'));
 
 //handle api requests example (not used)
 app.get('/api', (req, res) => {
@@ -60,8 +62,8 @@ app.get('/', (req, res) => {
 );
 
 //start server
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+app.listen(PORT, () => {
+    console.log(`Example app listening at http://localhost:${PORT}`);
 }
 );
 

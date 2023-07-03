@@ -18,14 +18,16 @@ npm run start
 
 
 # ---------------------- Oauth2 -------------------------
-Get Oauth2 token from https://aps.autodesk.com/en/docs/oauth/v2/tutorials/get-2-legged-token/
-
-client id and secret are stored in the .env file like this
+we use oauth2 to authenticate the user and get an access token to access the autodesk forge api.
+To do this we need to create a forge app in the forge developer portal https://aps.autodesk.com/myapps/
+the app will have a client id and a client secret which we will use to get the access token from the autodesk server
+the client id and client secret are stored in the .env file which is not included in the git repo for security reasons so you will have to create it yourself in the root folder of the project
 ```
-CLIENT_ID=<your client id>
-CLIENT_SECRET=<your client secret>
+APS_CLIENT_ID=<your client id>
+APS_CLIENT_SECRET=<your client secret>
+APS_BUCKET=<your bucket name>
+PORT=<optinal port>
 ```
-note that the .env file is not included in the git repo for security reasons so you will have to create it yourself in the root folder of the project
 
 # GETTING THE TOKEN FROM AUTODESK
 
@@ -64,5 +66,17 @@ when you are ready to deploy don't forget change the mode from development to pr
 6. server sends the token back to the client
 7. client can now access the forge api using the token it got from the server
 
+
+# ----------------------- PROJECT STRUCTURE -------------------------
+The project is structured in the following way:
+- Evrything related to the server is in the root folder of the project (index.js, package.json, webpack.config.js, .env, .gitignore, config.js)
+- All the server endpoint are seperated into modules in the routes folder
+- All the api calls to the autodesk forge api are in the services folder
+- Ignore the node_server_code folder as it is not used
+
+
 # --------------------- DOCUMENTING ---------------------
 Check the Documentation folder for more information on how to use the project and how to document the project
+
+# --------------------- POSTMAN AND API DOCUMNTATION ---------------------
+Inside the documentation folder you will find a postman collection with all the api endpoints for the autodesk forge api and a postman environment file with the variables needed to run the collection. With this you can test out the api endpoints and see how they work. You can also use the collection to generate the documentation for the api endpoints using the postman-to-openapi tooling. Check the documentation folder for more information on how to do this.

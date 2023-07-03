@@ -1,4 +1,4 @@
-import * as Autodesk from "https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js";
+/// import * as Autodesk from "@types/forge-viewer";
 
 async function getAccessToken(callback) {
     try {

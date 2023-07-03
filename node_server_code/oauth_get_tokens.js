@@ -1,5 +1,7 @@
-//getting oauth tokens from autodesk server for our app and user
+//Turns out autodesk has a node module for this, but I didn't know that when I wrote this code
+//All api calls are abstracted away in the autodesk forge node module
 
+//getting oauth tokens from autodesk server for our app and user
 //get client id and secret from environment variables
 require('dotenv').config();
 const axios = require('axios');
