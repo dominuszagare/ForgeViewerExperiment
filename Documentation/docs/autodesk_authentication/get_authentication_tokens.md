@@ -11,7 +11,7 @@ The two-legged authentication workflow is used when the application needs to acc
 
 Here is a example of how to get an access token and a refresh token using the [request](https://www.npmjs.com/package/request) package, when runing on a node.js server.
 
-```JavaScript
+```js
 //Run express server
 const express = require('express');
 const app = express();

@@ -26,6 +26,7 @@
   "homepage": "https://github.com/dominuszagare/ThreeJS_VR_app_quickstart#readme",
   "dependencies": {
     "@superviz/autodesk-viewer-plugin": "^1.6.9",
+    "@types/forge-viewer": "^7.69.5",
     "axios": "^1.4.0",
     "request": "^2.88.2",
     "stats.js": "^0.17.0",

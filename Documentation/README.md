@@ -102,13 +102,10 @@ We can achieve this by using the [postman-to-openapi](https://joolfe.github.io/p
 2. export the collection from postman as a json file
 3. use cli to convert the collection to openapi.json file `p2o ./path/to/PostmantoCollection.json -f ./path/to/result.yml -o ./path/to/options.json`
 Example `p2o .\api_doc\AutodeskAPIs.postman_collection.json -f .\api_doc\autodeskApi.yml -o .\api_doc\autodeskApi.json`
-
 Or 
-
 run the script `node .\postman_to_openapi.js` to convert the collection to openapi.yml file
 
 ### generating api documentation
 generate api documentation using `npm run docusaurus gen-api-docs autodeskAPI`
 run `yarn build` or `npm run build` to build the documentation
 run `yarn serve` or `npm run serve` to serve the documentation
-navigate to `http://localhost:3000/docs/api/forge/oauth_2_leg` to view the documentation
